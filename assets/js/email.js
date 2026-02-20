@@ -59,3 +59,11 @@ form.addEventListener("submit", function(e){
       console.log(error);
   });
 });
+
+
+// btn style add
+document.getElementById("contact-form").addEventListener("submit", function() {
+  const btn = this.querySelector(".form-submit-btn");
+  btn.querySelector(".btn-text").style.opacity = "0.6";
+  btn.querySelector(".spinner").style.display = "block";
+});

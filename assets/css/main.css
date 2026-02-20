@@ -1062,126 +1062,7 @@ section,
   background-color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
-.contact .info-wrap {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-}
 
-@media (max-width: 575px) {
-  .contact .info-wrap {
-    padding: 20px;
-  }
-}
-
-.contact .info-item {
-  margin-bottom: 40px;
-}
-
-.contact .info-item i {
-  font-size: 20px;
-  color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  margin-right: 15px;
-}
-
-.contact .info-item h3 {
-  padding: 0;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
-}
-
-.contact .info-item:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.contact .php-email-form {
-  background-color: var(--surface-color);
-  height: 100%;
-  padding: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 575px) {
-  .contact .php-email-form {
-    padding: 20px;
-  }
-}
-
-.custom-contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  font-family: Arial, sans-serif;
-}
-
-.form-row {
-  margin-bottom: 20px;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #333;
-  font-size: 15px;
-}
-
-.form-input,
-.form-textarea {
-  width: 100%;
-  font-size: 14px;
-  padding: 10px 15px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  background-color: #fafafa;
-  color: #222;
-  box-shadow: none;
-  transition: border-color 0.3s ease;
-}
-
-.form-input::placeholder,
-.form-textarea::placeholder {
-  color: rgba(0, 0, 0, 0.4);
-}
-
-.form-input:focus,
-.form-textarea:focus {
-  border-color: #007BFF;
-  outline: none;
-}
-
-.form-submit-btn {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 50px;
-  transition: background-color 0.3s ease;
-}
-
-.form-submit-btn:hover {
-  background-color: #0056b3;
-}
 
 
 /*--------------------------------------------------------------
@@ -1389,3 +1270,8 @@ section,
   from { transform: scale(0.7); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+/* ---------------------------------------
+   Modern Contact Form Upgrade
+--------------------------------------- */
+.contact-section{padding:80px 20px;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;justify-content:center;align-items:center}.custom-contact-form{width:100%;max-width:600px;background:#fff;padding:40px;border-radius:20px;box-shadow:0 20px 50px rgb(0 0 0 / .1);font-family:'Segoe UI',sans-serif;transition:0.3s ease}@media (max-width:575px){.custom-contact-form{padding:25px}}.form-title{text-align:center;font-size:28px;margin-bottom:5px;font-weight:700;color:#222}.form-subtitle{text-align:center;font-size:14px;margin-bottom:30px;color:#777}.form-row{margin-bottom:22px}.form-label{display:block;margin-bottom:8px;font-weight:600;font-size:14px;color:#333}.form-input,.form-textarea{width:100%;padding:12px 16px;font-size:14px;border-radius:8px;border:1px solid #e0e0e0;background:#f9f9f9;transition:all 0.3s ease;outline:none}.form-textarea{resize:none}.form-input:hover,.form-textarea:hover{border-color:#667eea;background:#fff}.form-input:focus,.form-textarea:focus{border-color:#667eea;background:#fff;box-shadow:0 0 0 3px rgb(102 126 234 / .15)}.form-submit-btn{width:100%;padding:14px;border:none;border-radius:50px;font-size:15px;font-weight:600;color:#fff;background:linear-gradient(135deg,#667eea,#764ba2);cursor:pointer;transition:all 0.3s ease;position:relative;overflow:hidden}.form-submit-btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgb(118 75 162 / .3)}.form-submit-btn:active{transform:scale(.97)}.spinner{width:18px;height:18px;border:2px solid #fff;border-top:2px solid #fff0;border-radius:50%;display:none;position:absolute;right:20px;top:50%;transform:translateY(-50%);animation:spin 0.7s linear infinite}@keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}

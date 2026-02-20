@@ -940,9 +940,58 @@
           </div>
 
           <div class="col-lg-7">
-            <form class="custom-contact-form" id="contact-form">
+            <div class="contact-section">
+              <form class="custom-contact-form" id="contact-form">
 
-              <!-- Honeypot (Hidden Spam Trap) -->
+                <!-- Honeypot (Spam Protection) -->
+                <input type="text" name="company" id="company-field" style="display:none">
+
+                <h2 class="form-title">Get In Touch</h2>
+                <p class="form-subtitle">We’d love to hear from you</p>
+
+                <div class="form-row">
+                  <label class="form-label">Your Name</label>
+                  <input type="text" name="from_name" class="form-input" required>
+                </div>
+
+                <div class="form-row">
+                  <label class="form-label">Your Email</label>
+                  <input type="email" name="reply_to" class="form-input" required>
+                </div>
+
+                <div class="form-row">
+                  <label class="form-label">Subject</label>
+                  <input type="text" name="subject" class="form-input" required>
+                </div>
+
+                <div class="form-row">
+                  <label class="form-label">Message</label>
+                  <textarea name="message" class="form-textarea" rows="5" required></textarea>
+                </div>
+
+                <!-- Google reCAPTCHA -->
+                <div class="form-row">
+                  <div class="g-recaptcha" data-sitekey="6Lfo_XEsAAAAAC0KGuYy5BndTPE6f5lvjMmfbol3"></div>
+                </div>
+
+                <div class="form-row">
+                  <button type="submit" class="form-submit-btn">
+                    <span class="btn-text">Send Message</span>
+                    <span class="spinner"></span>
+                  </button>
+                </div>
+
+              </form>
+            </div>
+
+            <!-- Success Popup -->
+            <div id="success-popup" class="popup">
+              <div class="popup-content">
+                <h3>✅ Message Sent Successfully!</h3>
+                <p>We will contact you shortly.</p>
+              </div>
+            </div>
+            <!-- <form class="custom-contact-form" id="contact-form">
               <input type="text" name="company" id="company-field" style="display:none">
 
               <div class="form-row">
@@ -964,8 +1013,6 @@
                 <label class="form-label">Message</label>
                 <textarea name="message" class="form-textarea" rows="6" required></textarea>
               </div>
-
-              <!-- Google reCAPTCHA -->
               <div class="g-recaptcha" data-sitekey="6Lfo_XEsAAAAAC0KGuYy5BndTPE6f5lvjMmfbol3"></div>
               <div class="form-row">
                 <button type="submit" class="form-submit-btn">
@@ -973,44 +1020,16 @@
                   <span class="spinner" style="display:none;"></span>
                 </button>
               </div>
-
             </form>
-
-            <!-- Success Popup -->
+            
             <div id="success-popup" class="popup">
               <div class="popup-content">
                 <h3>✅ Message Sent Successfully!</h3>
                 <p>We will contact you shortly.</p>
               </div>
-            </div>
-
-            <!-- <form action="https://formspree.io/f/xvgwpoob" method="POST" enctype="multipart/form-data"
-              class="custom-contact-form" id="contact-form">
-              <div class="form-row">
-                <label for="name-field" class="form-label">Your Name</label>
-                <input type="text" id="name-field" name="name" class="form-input" required>
-              </div>
-
-              <div class="form-row">
-                <label for="email-field" class="form-label">Your Email</label>
-                <input type="email" id="email-field" name="email" class="form-input" required>
-              </div>
-
-              <div class="form-row">
-                <label for="subject-field" class="form-label">Subject</label>
-                <input type="text" id="subject-field" name="subject" class="form-input" required>
-              </div>
-
-              <div class="form-row">
-                <label for="message-field" class="form-label">Message</label>
-                <textarea id="message-field" name="message" class="form-textarea" rows="10" required></textarea>
-              </div>
-
-              <div class="form-row">
-                <button type="submit" class="form-submit-btn">Send</button>
-              </div>
-            </form> -->
-          </div><!-- End Contact Form -->
+            </div> -->
+          </div>
+          <!-- End Contact Form -->
 
         </div>
 
