@@ -16,7 +16,7 @@ form.addEventListener("submit", function(e){
   // reCAPTCHA check
   if(grecaptcha.getResponse() === ""){
     alert("Please complete reCAPTCHA");
-    // 6LfM-HEsAAAAAJA8CnfST3EH2NHn6bgDak-qIDlP
+       // 6LfM-HEsAAAAAJA8CnfST3EH2NHn6bgDak-qIDlP
     return;
   }
 
@@ -32,27 +32,18 @@ form.addEventListener("submit", function(e){
       spinner.style.display = "none";
       btnText.style.display = "inline";
 
-      popup.style.display = "flex";
+      // Show Popup
+      popup.classList.add("active");
 
+      // Hide popup after 3 seconds
       setTimeout(()=>{
-        popup.style.display = "none";
+        popup.classList.remove("active");
       }, 3000);
 
       form.reset();
       grecaptcha.reset();
-    // WhatsApp Auto Message
-    const name = form.querySelector("[name='from_name']").value;
-    const subject = form.querySelector("[name='subject']").value;
-    const whatsappMessage = 
-        `Hello,
-        I just submitted the contact form on your website.
-        Name: ${name}
-        Subject: ${subject}
-        Please get back to me. Thank you.`;
-    const phoneNumber = "917625903382";
-    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
 
-    }, function(error){
+  }, function(error){
       alert("Failed to send message.");
       spinner.style.display = "none";
       btnText.style.display = "inline";
