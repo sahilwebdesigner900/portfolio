@@ -941,33 +941,50 @@
 
           <div class="col-lg-7">
             <form class="custom-contact-form" id="contact-form">
+
+              <!-- Honeypot (Hidden Spam Trap) -->
+              <input type="text" name="company" id="company-field" style="display:none">
+
               <div class="form-row">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="text" id="name" name="from_name" class="form-input" required>
+                <label class="form-label">Your Name</label>
+                <input type="text" name="from_name" class="form-input" required>
               </div>
 
               <div class="form-row">
-                <label for="email" class="form-label">Your Email</label>
-                <input type="email" id="email" name="reply_to" class="form-input" required>
+                <label class="form-label">Your Email</label>
+                <input type="email" name="reply_to" class="form-input" required>
               </div>
 
               <div class="form-row">
-                <label for="subject-field" class="form-label">Subject</label>
-                <input type="text" id="subject-field" name="subject" class="form-input" required>
+                <label class="form-label">Subject</label>
+                <input type="text" name="subject" class="form-input" required>
               </div>
 
               <div class="form-row">
-                <label for="message-field" class="form-label">Message</label>
-                <textarea id="message-field" name="message" class="form-textarea" rows="10" required></textarea>
+                <label class="form-label">Message</label>
+                <textarea name="message" class="form-textarea" rows="6" required></textarea>
               </div>
 
+              <!-- Google reCAPTCHA -->
+              <div class="g-recaptcha" data-sitekey="6LfM-HEsAAAAAPYm1peRiu3H6zEwpGP_feHGsu87"></div>
+
               <div class="form-row">
-                <button type="submit" class="form-submit-btn">Send</button>
+                <button type="submit" class="form-submit-btn">
+                  <span class="btn-text">Send</span>
+                  <span class="spinner" style="display:none;"></span>
+                </button>
               </div>
+
             </form>
-            <p id="form-message" style="display:none;color:green;margin-top:10px;">
-              Message sent successfully!
-            </p>
+
+            <!-- Success Popup -->
+            <div id="success-popup" class="popup">
+              <div class="popup-content">
+                <h3>✅ Message Sent Successfully!</h3>
+                <p>We will contact you shortly.</p>
+              </div>
+            </div>
+
             <!-- <form action="https://formspree.io/f/xvgwpoob" method="POST" enctype="multipart/form-data"
               class="custom-contact-form" id="contact-form">
               <div class="form-row">
@@ -1051,6 +1068,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script type="module" src="assets/js/email.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
